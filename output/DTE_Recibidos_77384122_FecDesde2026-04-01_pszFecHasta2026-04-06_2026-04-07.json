@@ -1,0 +1,1394 @@
+{
+  "SetDTE": {
+    "DTE": [
+      {
+        "Documento": {
+          "Encabezado": {
+            "IdDoc": {
+              "TipoDTE": "33",
+              "Folio": "2810",
+              "FchEmis": "2026-04-06",
+              "TpoTranCompra": "1",
+              "TpoTranVenta": "1",
+              "FmaPago": "2"
+            },
+            "Emisor": {
+              "RUTEmisor": "76741944-9",
+              "RznSoc": "DELIBERY BEER SPA",
+              "GiroEmis": "COMPRA Y VTA DE BEBI.Y LICORES, PRODUC.DE EVENTO BEBI.Y LICORES",
+              "Telefono": "0 0",
+              "CorreoEmisor": "gui.perez@jyhinversiones.com",
+              "Acteco": "492300",
+              "CdgSIISucur": "81037081",
+              "DirOrigen": "CURALI 0543   LOS HEROES",
+              "CmnaOrigen": "MAIPU",
+              "CiudadOrigen": "MAIPU"
+            },
+            "Receptor": {
+              "RUTRecep": "77384122-5",
+              "RznSocRecep": "FK SPA",
+              "GiroRecep": "SUMINISTRO DE COMIDAS POR ENCARGO",
+              "DirRecep": "ALFEREZ REAL 1485",
+              "CmnaRecep": "PROVIDENCIA",
+              "CiudadRecep": "Santiago"
+            },
+            "Totales": {
+              "MntNeto": "169750",
+              "TasaIVA": "19.00",
+              "IVA": "32253",
+              "ImptoReten": {
+                "TipoImp": "26",
+                "TasaImp": "20.50",
+                "MontoImp": "22499"
+              },
+              "MntTotal": "224502"
+            }
+          },
+          "Detalle": [
+            {
+              "NroLinDet": "1",
+              "NmbItem": "Summer ale 30 lts",
+              "DscItem": "* Impuesto Adic.: Cervezas y Otras bebidas alcoh?licas 20,5%",
+              "QtyItem": "2.00",
+              "UnmdItem": "Brl",
+              "PrcItem": "35600.00",
+              "CodImpAdic": "26",
+              "MontoItem": "71200"
+            },
+            {
+              "NroLinDet": "2",
+              "NmbItem": "Red ale 30 lts",
+              "DscItem": "* Impuesto Adic.: Cervezas y Otras bebidas alcoh?licas 20,5%",
+              "QtyItem": "1.00",
+              "UnmdItem": "Brl",
+              "PrcItem": "38550.00",
+              "CodImpAdic": "26",
+              "MontoItem": "38550"
+            },
+            {
+              "NroLinDet": "3",
+              "NmbItem": "Servicio log?stica 30 lts",
+              "QtyItem": "3.00",
+              "PrcItem": "20000.00",
+              "MontoItem": "60000"
+            }
+          ]
+        }
+      },
+      {
+        "Documento": {
+          "Encabezado": {
+            "IdDoc": {
+              "TipoDTE": "33",
+              "Folio": "1059",
+              "FchEmis": "2026-04-06",
+              "TpoTranCompra": "1",
+              "TpoTranVenta": "1",
+              "FmaPago": "1"
+            },
+            "Emisor": {
+              "RUTEmisor": "77363855-1",
+              "RznSoc": "REISAN SPA",
+              "GiroEmis": "COMERCIALIZACION DE HARINA VIA INETERNET,CORREO Y TELEFONO",
+              "CorreoEmisor": "ventas@gauchochileno.cl",
+              "Acteco": "479100",
+              "CdgSIISucur": "90777944",
+              "DirOrigen": "GUARDIA VIEJA 202 OF 902 9P",
+              "CmnaOrigen": "PROVIDENCIA",
+              "CiudadOrigen": "Santiago"
+            },
+            "Receptor": {
+              "RUTRecep": "77384122-5",
+              "RznSocRecep": "FK SPA",
+              "GiroRecep": "SUMINISTRO DE COMIDAS POR ENCARGO",
+              "DirRecep": "ALFEREZ REAL 1485",
+              "CmnaRecep": "PROVIDENCIA",
+              "CiudadRecep": "Santiago"
+            },
+            "Totales": {
+              "MntNeto": "224290",
+              "TasaIVA": "19.00",
+              "IVA": "42615",
+              "MntTotal": "266905"
+            }
+          },
+          "Detalle": [
+            {
+              "NroLinDet": "1",
+              "NmbItem": "Fior di latte",
+              "QtyItem": "31.40",
+              "PrcItem": "7143.00",
+              "MontoItem": "224290"
+            }
+          ]
+        }
+      },
+      {
+        "Documento": {
+          "Encabezado": {
+            "IdDoc": {
+              "TipoDTE": "33",
+              "Folio": "44201603",
+              "FchEmis": "2026-04-06",
+              "IndServicio": "2",
+              "FmaPago": "1"
+            },
+            "Emisor": {
+              "RUTEmisor": "81537600-5",
+              "RznSoc": "RENDIC HERMANOS S.A.",
+              "GiroEmis": "GRANDES ESTABLECIMIENTOS (VENTA DE ALIMENTOS), HIPERMERCADOS",
+              "Acteco": "521111",
+              "CdgSIISucur": "079231419",
+              "DirOrigen": "CERRO EL PLOMO 5680 7-11",
+              "CmnaOrigen": "LAS CONDES",
+              "CiudadOrigen": "SANTIAGO"
+            },
+            "Receptor": {
+              "RUTRecep": "77384122-5",
+              "RznSocRecep": "FK SPA",
+              "GiroRecep": "SANGUCHERIA",
+              "DirRecep": "ALFEREZ REAL 1485",
+              "CmnaRecep": "PROVIDENCIA",
+              "CiudadRecep": "SANTIAGO"
+            },
+            "Totales": {
+              "MntNeto": "7109",
+              "TasaIVA": "19.00",
+              "IVA": "1351",
+              "MntTotal": "8460"
+            }
+          },
+          "Detalle": [
+            {
+              "NroLinDet": "1",
+              "CdgItem": {
+                "TpoCodigo": "INT1",
+                "VlrCodigo": "7802341000144"
+              },
+              "NmbItem": "ALBAHACA BOLSA 100 GR",
+              "DscItem": "1.0 x 1 UN $1590 Bruto/$1336.0 Neto",
+              "QtyItem": "1.0",
+              "UnmdItem": "UN",
+              "PrcItem": "1336.0",
+              "MontoItem": "1336"
+            },
+            {
+              "NroLinDet": "2",
+              "CdgItem": {
+                "TpoCodigo": "INT1",
+                "VlrCodigo": "7801340000148"
+              },
+              "NmbItem": "CHAMPINON BDJA 200 GR",
+              "DscItem": "2.0 x 1 UN $1590 Bruto/$1336.5 Neto",
+              "QtyItem": "2.0",
+              "UnmdItem": "UN",
+              "PrcItem": "1336.5",
+              "MontoItem": "2673"
+            },
+            {
+              "NroLinDet": "3",
+              "CdgItem": {
+                "TpoCodigo": "INT1",
+                "VlrCodigo": "7802920000930"
+              },
+              "NmbItem": "YOGHURT BATIDO COLUN 125 GR, FRUTILLA",
+              "DscItem": "4.0 x 1 UN $290 Bruto/$243.5 Neto",
+              "QtyItem": "4.0",
+              "UnmdItem": "UN",
+              "PrcItem": "243.5",
+              "DescuentoPct": "13.79",
+              "DescuentoMonto": "134",
+              "MontoItem": "840"
+            },
+            {
+              "NroLinDet": "4",
+              "CdgItem": {
+                "TpoCodigo": "INT1",
+                "VlrCodigo": "7802920000954"
+              },
+              "NmbItem": "YOGHURT BATIDO COLUN 125 GR, VAINILLA",
+              "DscItem": "4.0 x 1 UN $290 Bruto/$243.5 Neto",
+              "QtyItem": "4.0",
+              "UnmdItem": "UN",
+              "PrcItem": "243.5",
+              "DescuentoPct": "13.79",
+              "DescuentoMonto": "134",
+              "MontoItem": "840"
+            },
+            {
+              "NroLinDet": "5",
+              "CdgItem": {
+                "TpoCodigo": "INT1",
+                "VlrCodigo": "92336"
+              },
+              "NmbItem": "RUCULA BOLSA 200 GR.",
+              "DscItem": "1.0 x 1 UN $1690 Bruto/$1420.0 Neto",
+              "QtyItem": "1.0",
+              "UnmdItem": "UN",
+              "PrcItem": "1420.0",
+              "MontoItem": "1420"
+            }
+          ]
+        }
+      },
+      {
+        "Documento": {
+          "Encabezado": {
+            "IdDoc": {
+              "TipoDTE": "33",
+              "Folio": "3199",
+              "FchEmis": "2026-04-05",
+              "TpoTranCompra": "1",
+              "TpoTranVenta": "1",
+              "FmaPago": "1"
+            },
+            "Emisor": {
+              "RUTEmisor": "76667125-K",
+              "RznSoc": "COMERCIAL CINCO 2 LIMITADA",
+              "GiroEmis": "ARTICULOS DE LIBRERIA, PAQUETERIA Y BAZAR",
+              "Telefono": "2",
+              "CorreoEmisor": "HUABOCONTA@GMAIL.COM",
+              "Acteco": "475909",
+              "CdgSIISucur": "80477999",
+              "DirOrigen": "MANUEL MONTT 1097 LC 1 1SB",
+              "CmnaOrigen": "PROVIDENCIA",
+              "CiudadOrigen": "stgo"
+            },
+            "Receptor": {
+              "RUTRecep": "77384122-5",
+              "RznSocRecep": "FK SPA",
+              "GiroRecep": "SUMINISTRO DE COMIDAS POR ENCARGO",
+              "DirRecep": "ALFEREZ REAL 1485",
+              "CmnaRecep": "PROVIDENCIA",
+              "CiudadRecep": "stgo"
+            },
+            "Totales": {
+              "MntNeto": "20832",
+              "TasaIVA": "19.00",
+              "IVA": "3958",
+              "MntTotal": "24790"
+            }
+          },
+          "Detalle": [
+            {
+              "NroLinDet": "1",
+              "NmbItem": "Pizarra y plumones",
+              "QtyItem": "4.00",
+              "PrcItem": "5207.98",
+              "MontoItem": "20832"
+            }
+          ]
+        }
+      },
+      {
+        "Documento": {
+          "Encabezado": {
+            "IdDoc": {
+              "TipoDTE": "33",
+              "Folio": "3198",
+              "FchEmis": "2026-04-05",
+              "TpoTranCompra": "1",
+              "TpoTranVenta": "1",
+              "FmaPago": "1"
+            },
+            "Emisor": {
+              "RUTEmisor": "76667125-K",
+              "RznSoc": "COMERCIAL CINCO 2 LIMITADA",
+              "GiroEmis": "ARTICULOS DE LIBRERIA, PAQUETERIA Y BAZAR",
+              "Telefono": "2",
+              "CorreoEmisor": "HUABOCONTA@GMAIL.COM",
+              "Acteco": "475909",
+              "CdgSIISucur": "80477999",
+              "DirOrigen": "MANUEL MONTT 1097 LC 1 1SB",
+              "CmnaOrigen": "PROVIDENCIA",
+              "CiudadOrigen": "stgo"
+            },
+            "Receptor": {
+              "RUTRecep": "77384122-5",
+              "RznSocRecep": "FK SPA",
+              "GiroRecep": "SUMINISTRO DE COMIDAS POR ENCARGO",
+              "DirRecep": "ALFEREZ REAL 1485",
+              "CmnaRecep": "PROVIDENCIA",
+              "CiudadRecep": "stgo"
+            },
+            "Totales": {
+              "MntNeto": "3344",
+              "TasaIVA": "19.00",
+              "IVA": "635",
+              "MntTotal": "3979"
+            }
+          },
+          "Detalle": [
+            {
+              "NroLinDet": "1",
+              "NmbItem": "Bombilla",
+              "QtyItem": "3.00",
+              "PrcItem": "1114.80",
+              "MontoItem": "3344"
+            }
+          ]
+        }
+      },
+      {
+        "Documento": {
+          "Encabezado": {
+            "IdDoc": {
+              "TipoDTE": "33",
+              "Folio": "1061",
+              "FchEmis": "2026-04-05",
+              "TpoTranCompra": "1",
+              "TpoTranVenta": "1",
+              "FmaPago": "2"
+            },
+            "Emisor": {
+              "RUTEmisor": "78024543-3",
+              "RznSoc": "COMERCIAL AGRICOLA EL TREBOL SPA",
+              "GiroEmis": "VENTA DE FRUTAS, VERDURAS Y FRUTOS SECOS",
+              "Telefono": "981305504",
+              "CorreoEmisor": "Hernancabezas@hotmail.com",
+              "Acteco": "463011",
+              "CdgSIISucur": "91098221",
+              "DirOrigen": "LASTRA 869 LC 35",
+              "CmnaOrigen": "RECOLETA",
+              "CiudadOrigen": "SANTIAGO"
+            },
+            "Receptor": {
+              "RUTRecep": "77384122-5",
+              "RznSocRecep": "FK SPA",
+              "GiroRecep": "SUMINISTRO DE COMIDAS POR ENCARGO",
+              "DirRecep": "ALFEREZ REAL 1485",
+              "CmnaRecep": "PROVIDENCIA",
+              "CiudadRecep": "SANTIAGO"
+            },
+            "Totales": {
+              "MntNeto": "65650",
+              "TasaIVA": "19.00",
+              "IVA": "12474",
+              "MntTotal": "78124"
+            }
+          },
+          "Detalle": [
+            {
+              "NroLinDet": "1",
+              "NmbItem": "mix frutos secas",
+              "QtyItem": "13.00",
+              "PrcItem": "5050.00",
+              "MontoItem": "65650"
+            }
+          ]
+        }
+      },
+      {
+        "Documento": {
+          "Encabezado": {
+            "IdDoc": {
+              "TipoDTE": "33",
+              "Folio": "3196",
+              "FchEmis": "2026-04-04",
+              "TpoTranCompra": "1",
+              "TpoTranVenta": "1",
+              "FmaPago": "1"
+            },
+            "Emisor": {
+              "RUTEmisor": "76667125-K",
+              "RznSoc": "COMERCIAL CINCO 2 LIMITADA",
+              "GiroEmis": "ARTICULOS DE LIBRERIA, PAQUETERIA Y BAZAR",
+              "Telefono": "2",
+              "CorreoEmisor": "HUABOCONTA@GMAIL.COM",
+              "Acteco": "475909",
+              "CdgSIISucur": "80477999",
+              "DirOrigen": "MANUEL MONTT 1097 LC 1 1SB",
+              "CmnaOrigen": "PROVIDENCIA",
+              "CiudadOrigen": "STGO"
+            },
+            "Receptor": {
+              "RUTRecep": "77384122-5",
+              "RznSocRecep": "FK SPA",
+              "GiroRecep": "SUMINISTRO DE COMIDAS POR ENCARGO",
+              "DirRecep": "ALFEREZ REAL 1485",
+              "CmnaRecep": "PROVIDENCIA",
+              "CiudadRecep": "STGO"
+            },
+            "Totales": {
+              "MntNeto": "20790",
+              "TasaIVA": "19.00",
+              "IVA": "3950",
+              "MntTotal": "24740"
+            }
+          },
+          "Detalle": [
+            {
+              "NroLinDet": "1",
+              "NmbItem": "PESAS Y CONTROL DE TV",
+              "QtyItem": "4.00",
+              "PrcItem": "5197.47",
+              "MontoItem": "20790"
+            }
+          ]
+        }
+      },
+      {
+        "Documento": {
+          "Encabezado": {
+            "IdDoc": {
+              "TipoDTE": "33",
+              "Folio": "29730150",
+              "FchEmis": "2026-04-02",
+              "FmaPago": "1"
+            },
+            "Emisor": {
+              "RUTEmisor": "97006000-6",
+              "RznSoc": "BANCO DE CREDITO E INVERSIONES",
+              "GiroEmis": "BANCO COMERCIAL",
+              "Acteco": "81011",
+              "Sucursal": "Oficina Central",
+              "CdgSIISucur": "65951389",
+              "DirOrigen": "Huerfanos 1134",
+              "CmnaOrigen": "Santiago Centro"
+            },
+            "Receptor": {
+              "RUTRecep": "77384122-5",
+              "RznSocRecep": "FK SPA",
+              "GiroRecep": "ACT. RESTAURANTES Y SERV. MOVIL COMIDAS",
+              "DirRecep": "ALFEREZ REAL 1485",
+              "CmnaRecep": "PROVIDENCIA",
+              "CiudadRecep": "SANTIAGO"
+            },
+            "Totales": {
+              "MntNeto": "9586",
+              "TasaIVA": "19.0",
+              "IVA": "1821",
+              "MntTotal": "11407",
+              "MontoNF": "0",
+              "SaldoAnterior": "0",
+              "VlrPagar": "0"
+            }
+          },
+          "Detalle": [
+            {
+              "NroLinDet": "1",
+              "NmbItem": "Comision por uso internacional tarjeta de credito visa terminada en 0521",
+              "MontoItem": "9586"
+            }
+          ]
+        }
+      },
+      {
+        "Documento": {
+          "Encabezado": {
+            "IdDoc": {
+              "TipoDTE": "33",
+              "Folio": "29730149",
+              "FchEmis": "2026-04-02",
+              "FmaPago": "1"
+            },
+            "Emisor": {
+              "RUTEmisor": "97006000-6",
+              "RznSoc": "BANCO DE CREDITO E INVERSIONES",
+              "GiroEmis": "BANCO COMERCIAL",
+              "Acteco": "81011",
+              "Sucursal": "Oficina Central",
+              "CdgSIISucur": "65951389",
+              "DirOrigen": "Huerfanos 1134",
+              "CmnaOrigen": "Santiago Centro"
+            },
+            "Receptor": {
+              "RUTRecep": "77384122-5",
+              "RznSocRecep": "FK SPA",
+              "GiroRecep": "ACT. RESTAURANTES Y SERV. MOVIL COMIDAS",
+              "DirRecep": "ALFEREZ REAL 1485",
+              "CmnaRecep": "PROVIDENCIA",
+              "CiudadRecep": "SANTIAGO"
+            },
+            "Totales": {
+              "MntNeto": "3348",
+              "TasaIVA": "19.0",
+              "IVA": "636",
+              "MntTotal": "3984",
+              "MontoNF": "0",
+              "SaldoAnterior": "0",
+              "VlrPagar": "0"
+            }
+          },
+          "Detalle": [
+            {
+              "NroLinDet": "1",
+              "NmbItem": "Comision mensual tarjeta de credito visa terminada en 0521",
+              "MontoItem": "3348"
+            }
+          ]
+        }
+      },
+      {
+        "Documento": {
+          "Encabezado": {
+            "IdDoc": {
+              "TipoDTE": "33",
+              "Folio": "44194645",
+              "FchEmis": "2026-04-04",
+              "IndServicio": "2",
+              "FmaPago": "1"
+            },
+            "Emisor": {
+              "RUTEmisor": "81537600-5",
+              "RznSoc": "RENDIC HERMANOS S.A.",
+              "GiroEmis": "GRANDES ESTABLECIMIENTOS (VENTA DE ALIMENTOS), HIPERMERCADOS",
+              "Acteco": "521111",
+              "CdgSIISucur": "079231419",
+              "DirOrigen": "CERRO EL PLOMO 5680 7-11",
+              "CmnaOrigen": "LAS CONDES",
+              "CiudadOrigen": "SANTIAGO"
+            },
+            "Receptor": {
+              "RUTRecep": "77384122-5",
+              "RznSocRecep": "FK SPA",
+              "GiroRecep": "SANGUCHERIA",
+              "DirRecep": "ALFEREZ REAL 1485",
+              "CmnaRecep": "PROVIDENCIA",
+              "CiudadRecep": "SANTIAGO"
+            },
+            "Totales": {
+              "MntNeto": "9387",
+              "TasaIVA": "19.00",
+              "IVA": "1783",
+              "MntTotal": "11170"
+            }
+          },
+          "Detalle": [
+            {
+              "NroLinDet": "1",
+              "CdgItem": {
+                "TpoCodigo": "INT1",
+                "VlrCodigo": "2050003539036"
+              },
+              "NmbItem": "SET 3 EMBUDOS CROSS DKORA",
+              "DscItem": "1.0 x 1 UN $1490 Bruto/$1252.0 Neto",
+              "QtyItem": "1.0",
+              "UnmdItem": "UN",
+              "PrcItem": "1252.0",
+              "MontoItem": "1252"
+            },
+            {
+              "NroLinDet": "2",
+              "CdgItem": {
+                "TpoCodigo": "INT1",
+                "VlrCodigo": "7804115001739"
+              },
+              "NmbItem": "PECHUGA POLLO DESH ARIZTIA 850 GR",
+              "DscItem": "1.0 x 1 UN $5990 Bruto/$5034.0 Neto",
+              "QtyItem": "1.0",
+              "UnmdItem": "UN",
+              "PrcItem": "5034.0",
+              "MontoItem": "5034"
+            },
+            {
+              "NroLinDet": "3",
+              "CdgItem": {
+                "TpoCodigo": "INT1",
+                "VlrCodigo": "7804100102106"
+              },
+              "NmbItem": "HUEVO GRANDE BLANCO YEMITA 12 UN",
+              "DscItem": "1.0 x 1 UN $3990 Bruto/$3353.0 Neto",
+              "QtyItem": "1.0",
+              "UnmdItem": "UN",
+              "PrcItem": "3353.0",
+              "DescuentoPct": "7.52",
+              "DescuentoMonto": "252",
+              "MontoItem": "3101"
+            }
+          ]
+        }
+      },
+      {
+        "Documento": {
+          "Encabezado": {
+            "IdDoc": {
+              "TipoDTE": "33",
+              "Folio": "17441467",
+              "FchEmis": "2026-04-03",
+              "FchVenc": "2026-04-03"
+            },
+            "Emisor": {
+              "RUTEmisor": "96928510-K",
+              "RznSoc": "Empresas Lipigas S.A",
+              "GiroEmis": "Distribuci?n de gas licuado",
+              "Acteco": "402000",
+              "Sucursal": "Sucursal Lipigas",
+              "DirOrigen": "Apoquindo 5400, Piso 15",
+              "CmnaOrigen": "Las Condes",
+              "CiudadOrigen": "Santiago",
+              "CdgVendedor": "16390050-5"
+            },
+            "Receptor": {
+              "RUTRecep": "77384122-5",
+              "CdgIntRecep": "0000556392",
+              "RznSocRecep": "FK SPA",
+              "GiroRecep": "ELABORACION DE PRODUCTOS DE PANADERIA Y",
+              "DirRecep": "ALFEREZ REAL 1485",
+              "CmnaRecep": "PROVIDENCIA",
+              "CiudadRecep": null
+            },
+            "Totales": {
+              "MntNeto": "101597",
+              "TasaIVA": "19",
+              "IVA": "19303",
+              "MntTotal": "120900"
+            }
+          },
+          "Detalle": [
+            {
+              "NroLinDet": "1",
+              "NmbItem": "Gas Env.45 Kg.Cl?sico",
+              "DscItem": "Gas Env.45 Kg.Cl?sico",
+              "QtyItem": "2",
+              "UnmdItem": "CAR",
+              "PrcItem": "50798",
+              "MontoItem": "101596"
+            }
+          ]
+        }
+      },
+      {
+        "Documento": {
+          "Encabezado": {
+            "IdDoc": {
+              "TipoDTE": "33",
+              "Folio": "65788",
+              "FchEmis": "2026-04-03",
+              "TpoTranCompra": "1",
+              "TpoTranVenta": "1",
+              "FmaPago": "2"
+            },
+            "Emisor": {
+              "RUTEmisor": "15932107-K",
+              "RznSoc": "FRANCISCO JOSE ANTONIO VILLALOBOS RESTOVIC",
+              "GiroEmis": "ELABORACI?N DE HIELO;VENTA DE ALIMENTOS AL POR MENOR Y POR MAYOR.",
+              "Telefono": "9 97893648",
+              "CorreoEmisor": "andinohielo@gmail.com",
+              "Acteco": "479100",
+              "CdgSIISucur": "75064525",
+              "DirOrigen": "GARIBALDI 1553",
+              "CmnaOrigen": "NUNOA",
+              "CiudadOrigen": "SANTIAGO"
+            },
+            "Receptor": {
+              "RUTRecep": "77384122-5",
+              "RznSocRecep": "FK SPA",
+              "GiroRecep": "ACTIVIDADES DE RESTAURANTES Y DE SERVICI",
+              "DirRecep": "ALFEREZ REAL 1485",
+              "CmnaRecep": "PROVIDENCIA",
+              "CiudadRecep": "SANTIAGO"
+            },
+            "Totales": {
+              "MntNeto": "24000",
+              "TasaIVA": "19.00",
+              "IVA": "4560",
+              "MntTotal": "28560"
+            }
+          },
+          "Detalle": [
+            {
+              "NroLinDet": "1",
+              "NmbItem": "Hielo tubo macizo",
+              "QtyItem": "40.00",
+              "UnmdItem": "kg",
+              "PrcItem": "400.00",
+              "MontoItem": "16000"
+            },
+            {
+              "NroLinDet": "2",
+              "NmbItem": "Hielo microcubo",
+              "QtyItem": "20.00",
+              "UnmdItem": "kg",
+              "PrcItem": "400.00",
+              "MontoItem": "8000"
+            }
+          ]
+        }
+      },
+      {
+        "Documento": {
+          "Encabezado": {
+            "IdDoc": {
+              "TipoDTE": "33",
+              "Folio": "14112",
+              "FchEmis": "2026-04-02",
+              "TpoTranCompra": "1",
+              "TpoTranVenta": "1",
+              "FmaPago": "2"
+            },
+            "Emisor": {
+              "RUTEmisor": "13548612-4",
+              "RznSoc": "MAURICIO ALEJANDRO VILLAGRAN SALAH",
+              "GiroEmis": "SERVICIOS DE INGENIERIA EN ALIMENTOS/ELABORACION DE CERVEZA",
+              "Telefono": "2 8413605",
+              "CorreoEmisor": "mvillagransalah@yahoo.es",
+              "Acteco": "110300",
+              "CdgSIISucur": "65537145",
+              "DirOrigen": "LOS TRIGALES 17   PARCELA 27",
+              "CmnaOrigen": "SAN BERNARDO",
+              "CiudadOrigen": "STGO."
+            },
+            "Receptor": {
+              "RUTRecep": "77384122-5",
+              "RznSocRecep": "FK SPA",
+              "GiroRecep": "SUMINISTRO DE COMIDAS POR ENCARGO",
+              "DirRecep": "ALFEREZ REAL 1485",
+              "CmnaRecep": "PROVIDENCIA",
+              "CiudadRecep": "STG"
+            },
+            "Totales": {
+              "MntNeto": "127767",
+              "TasaIVA": "19.00",
+              "IVA": "24276",
+              "ImptoReten": {
+                "TipoImp": "26",
+                "TasaImp": "20.50",
+                "MontoImp": "18957"
+              },
+              "MntTotal": "171000"
+            }
+          },
+          "Detalle": [
+            {
+              "NroLinDet": "1",
+              "NmbItem": "CERV EDELSTOFF IPA 6?",
+              "DscItem": "* Impuesto Adic.: Cervezas y Otras bebidas alcoh?licas 20,5%",
+              "QtyItem": "1.00",
+              "UnmdItem": "B30",
+              "PrcItem": "49462.37",
+              "CodImpAdic": "26",
+              "MontoItem": "49462"
+            },
+            {
+              "NroLinDet": "2",
+              "NmbItem": "CERV EDELSTOFF PORTER 5?",
+              "DscItem": "* Impuesto Adic.: Cervezas y Otras bebidas alcoh?licas 20,5%",
+              "QtyItem": "1.00",
+              "UnmdItem": "B30",
+              "PrcItem": "43010.75",
+              "CodImpAdic": "26",
+              "MontoItem": "43011"
+            },
+            {
+              "NroLinDet": "3",
+              "NmbItem": "SERVICIO DISTRIBUCION",
+              "QtyItem": "2.00",
+              "UnmdItem": "UN",
+              "PrcItem": "17647.06",
+              "MontoItem": "35294"
+            }
+          ]
+        }
+      },
+      {
+        "Documento": {
+          "Encabezado": {
+            "IdDoc": {
+              "TipoDTE": "33",
+              "Folio": "11",
+              "FchEmis": "2026-04-02",
+              "FmaPago": "2",
+              "FchVenc": "2026-04-02"
+            },
+            "Emisor": {
+              "RUTEmisor": "78348451-K",
+              "RznSoc": "MERCADO PLAGA SPA",
+              "GiroEmis": "COMERCIALIZACION Y DISTRIBUCION DE PRODUCTOS DE CONTROL DE PLAGAS",
+              "Acteco": "469000",
+              "DirOrigen": "VICTOR CUCCUINI 116",
+              "CmnaOrigen": "RECOLETA",
+              "CiudadOrigen": "SANTIAGO"
+            },
+            "Receptor": {
+              "RUTRecep": "77384122-5",
+              "RznSocRecep": "FK SPA",
+              "GiroRecep": "GIRO",
+              "DirRecep": "ALFEREZ REAL 1485",
+              "CmnaRecep": "PROVIDENCIA",
+              "CiudadRecep": "SANTIAGO"
+            },
+            "Totales": {
+              "MntNeto": "24008",
+              "MntExe": "0",
+              "TasaIVA": "19",
+              "IVA": "4562",
+              "MntTotal": "28570"
+            }
+          },
+          "Detalle": [
+            {
+              "NroLinDet": "1",
+              "NmbItem": "TRAMPA DE RATONES PARA BALDE",
+              "DscItem": "TRAMPA DE RATONES PARA BALDE",
+              "QtyItem": "1.000000",
+              "UnmdItem": "UN",
+              "PrcItem": "21008.4",
+              "MontoItem": "21008"
+            },
+            {
+              "NroLinDet": "2",
+              "NmbItem": "TRAMPA GOLPE RATON",
+              "DscItem": "TRAMPA GOLPE RATON",
+              "QtyItem": "2.000000",
+              "UnmdItem": "UN",
+              "PrcItem": "1500.0",
+              "MontoItem": "3000"
+            }
+          ]
+        }
+      },
+      {
+        "Documento": {
+          "Encabezado": {
+            "IdDoc": {
+              "TipoDTE": "33",
+              "Folio": "73151641",
+              "FchEmis": "2026-04-01",
+              "IndServicio": "2",
+              "MntBruto": "1",
+              "MntPagos": {
+                "FchPago": "2026-04-20",
+                "MntPago": "17092"
+              },
+              "PeriodoDesde": "2026-03-01",
+              "PeriodoHasta": "2026-03-31",
+              "FchVenc": "2026-04-20"
+            },
+            "Emisor": {
+              "RUTEmisor": "76124890-1",
+              "RznSoc": "Telef?nica M?viles Chile S.A.",
+              "GiroEmis": "Comunicaciones",
+              "Telefono": "6006003000",
+              "CorreoEmisor": "movistar@movistar.cl",
+              "Acteco": "642090",
+              "DirOrigen": "Av. Providencia 111",
+              "CmnaOrigen": "Providencia",
+              "CiudadOrigen": "Santiago"
+            },
+            "Receptor": {
+              "RUTRecep": "77384122-5",
+              "CdgIntRecep": "150836670",
+              "RznSocRecep": "FK SPA",
+              "GiroRecep": "SERVICIOS",
+              "Contacto": "56941829750",
+              "CorreoRecep": "13123",
+              "DirRecep": "ALFEREZ REAL 1485",
+              "CmnaRecep": "PROVIDENCIA",
+              "CiudadRecep": "Metropolitana de San",
+              "DirPostal": "ALFEREZ REAL 1485",
+              "CmnaPostal": "PROVIDENCIA",
+              "CiudadPostal": "Metropolitana de San"
+            },
+            "Totales": {
+              "MntNeto": "14363",
+              "TasaIVA": "19",
+              "IVA": "2729",
+              "MntTotal": "17092",
+              "MontoNF": "0",
+              "MontoPeriodo": "17092",
+              "SaldoAnterior": "0",
+              "VlrPagar": "17092"
+            }
+          },
+          "Detalle": [
+            {
+              "NroLinDet": "1",
+              "NmbItem": "Cargo Fijo_Voz Asociado a PLAN",
+              "DescuentoMonto": "6888",
+              "MontoItem": "2992"
+            },
+            {
+              "NroLinDet": "2",
+              "NmbItem": "Cargo Fijo Dato Asociado a PLAN",
+              "DescuentoMonto": "6446",
+              "MontoItem": "5553"
+            },
+            {
+              "NroLinDet": "3",
+              "NmbItem": "Cargo Fijo_Voz Asociado a PLAN",
+              "DescuentoMonto": "6888",
+              "MontoItem": "2992"
+            },
+            {
+              "NroLinDet": "4",
+              "NmbItem": "Cargo Fijo Dato Asociado a PLAN",
+              "DescuentoMonto": "6445",
+              "MontoItem": "5555"
+            }
+          ]
+        }
+      },
+      {
+        "Documento": {
+          "Encabezado": {
+            "IdDoc": {
+              "TipoDTE": "33",
+              "Folio": "81170",
+              "FchEmis": "2026-04-01",
+              "FmaPago": "2",
+              "FchVenc": "2026-04-01"
+            },
+            "Emisor": {
+              "RUTEmisor": "76319286-5",
+              "RznSoc": "QIFOOD SPA",
+              "GiroEmis": "IMPORT Y COMERC DE PRODUCTOS ALIMENTICIOS ASESORIAS COMERCIAL",
+              "Acteco": "469000",
+              "DirOrigen": "PDTE EDUARDO FREI MONTALVA 7070 B24",
+              "CmnaOrigen": "QUILICURA",
+              "CiudadOrigen": "SANTIAGO"
+            },
+            "Receptor": {
+              "RUTRecep": "77384122-5",
+              "RznSocRecep": "FK SPA",
+              "GiroRecep": "SUMINISTRO INDUSTRIAL DE COMIDA POR ENCA",
+              "DirRecep": "ALFEREZ REAL 1485",
+              "CmnaRecep": "PROVIDENCIA",
+              "CiudadRecep": "SANTIAGO"
+            },
+            "Totales": {
+              "MntNeto": "357166",
+              "MntExe": "0",
+              "TasaIVA": "19",
+              "IVA": "67862",
+              "MntTotal": "425028"
+            }
+          },
+          "Detalle": [
+            {
+              "NroLinDet": "1",
+              "NmbItem": "HARINA C A CLASSICA PIZZA NAPOLETANA 25 KG",
+              "DscItem": "HARINA C A CLASSICA PIZZA NAPOLETANA 25 KG",
+              "QtyItem": "2.000000",
+              "UnmdItem": "UN",
+              "PrcItem": "47500.0",
+              "MontoItem": "95000"
+            },
+            {
+              "NroLinDet": "2",
+              "NmbItem": "CR NDJUA PICCANTE 400 GR",
+              "DscItem": "CR NDJUA PICCANTE 400 GR",
+              "QtyItem": "0.800000",
+              "UnmdItem": "UN",
+              "PrcItem": "18000.0",
+              "MontoItem": "14400"
+            },
+            {
+              "NroLinDet": "3",
+              "NmbItem": "CR MASCARPONE UHT STERILGARDA 500 GR",
+              "DscItem": "CR MASCARPONE UHT STERILGARDA 500 GR",
+              "QtyItem": "12.000000",
+              "UnmdItem": "UN",
+              "PrcItem": "7010.0",
+              "MontoItem": "84120"
+            },
+            {
+              "NroLinDet": "4",
+              "NmbItem": "NEGRONI MONTORSI PROSCIUTTO CRUDO CHEF LAMINADO ITALIA 500 GR",
+              "DscItem": "NEGRONI MONTORSI PROSCIUTTO CRUDO CHEF LAMINADO ITALIA 500 GR",
+              "QtyItem": "1.000000",
+              "UnmdItem": "UN",
+              "PrcItem": "13690.0",
+              "MontoItem": "13690"
+            },
+            {
+              "NroLinDet": "5",
+              "NmbItem": "CR SALCICCIA BASTONE PICCANTE X2 SV SO ",
+              "DscItem": "CR SALCICCIA BASTONE PICCANTE X2 SV SO ",
+              "QtyItem": "1.300000",
+              "UnmdItem": "UN",
+              "PrcItem": "20570.0",
+              "MontoItem": "26741"
+            },
+            {
+              "NroLinDet": "6",
+              "NmbItem": "FRANCIA FIOR DI LATTE PERLINE 5G BOLSA 1KG FROZEN ",
+              "DscItem": "FRANCIA FIOR DI LATTE PERLINE 5G BOLSA 1KG FROZEN ",
+              "QtyItem": "2.000000",
+              "UnmdItem": "UN",
+              "PrcItem": "14150.0",
+              "MontoItem": "28300"
+            },
+            {
+              "NroLinDet": "7",
+              "NmbItem": "VIRGILIO PECORINO ROMANO 1000 GR APX",
+              "DscItem": "VIRGILIO PECORINO ROMANO 1000 GR APX",
+              "QtyItem": "1.100000",
+              "UnmdItem": "UN",
+              "PrcItem": "29150.0",
+              "MontoItem": "32065"
+            },
+            {
+              "NroLinDet": "8",
+              "NmbItem": "REGA POMODORI PELATI 2 5 KG GOLD REGA",
+              "DscItem": "REGA POMODORI PELATI 2 5 KG GOLD REGA",
+              "QtyItem": "8.000000",
+              "UnmdItem": "UN",
+              "PrcItem": "7000.0",
+              "MontoItem": "56000"
+            },
+            {
+              "NroLinDet": "9",
+              "NmbItem": "FLETE METROPOLITANA",
+              "DscItem": "FLETE METROPOLITANA",
+              "QtyItem": "1.000000",
+              "UnmdItem": "UN",
+              "PrcItem": "6850.0",
+              "MontoItem": "6850"
+            }
+          ]
+        }
+      },
+      {
+        "Documento": {
+          "Encabezado": {
+            "IdDoc": {
+              "TipoDTE": "33",
+              "Folio": "44175890",
+              "FchEmis": "2026-04-01",
+              "IndServicio": "2",
+              "FmaPago": "1"
+            },
+            "Emisor": {
+              "RUTEmisor": "81537600-5",
+              "RznSoc": "RENDIC HERMANOS S.A.",
+              "GiroEmis": "GRANDES ESTABLECIMIENTOS (VENTA DE ALIMENTOS), HIPERMERCADOS",
+              "Acteco": "521111",
+              "CdgSIISucur": "079231419",
+              "DirOrigen": "CERRO EL PLOMO 5680 7-11",
+              "CmnaOrigen": "LAS CONDES",
+              "CiudadOrigen": "SANTIAGO"
+            },
+            "Receptor": {
+              "RUTRecep": "77384122-5",
+              "RznSocRecep": "FK SPA",
+              "GiroRecep": "SANGUCHERIA",
+              "DirRecep": "ALFEREZ REAL 1485",
+              "CmnaRecep": "PROVIDENCIA",
+              "CiudadRecep": "SANTIAGO"
+            },
+            "Totales": {
+              "MntNeto": "5321",
+              "TasaIVA": "19.00",
+              "IVA": "1011",
+              "MntTotal": "6332"
+            }
+          },
+          "Detalle": [
+            {
+              "NroLinDet": "1",
+              "CdgItem": {
+                "TpoCodigo": "INT1",
+                "VlrCodigo": "99340"
+              },
+              "NmbItem": "QUESO CHANCO LAMINADO LAS PARCELAS KG",
+              "DscItem": "0.256 x 1 KG $11961 Bruto/$10050.7813 Neto",
+              "QtyItem": "0.256",
+              "UnmdItem": "KG",
+              "PrcItem": "10050.7813",
+              "MontoItem": "2573"
+            },
+            {
+              "NroLinDet": "2",
+              "CdgItem": {
+                "TpoCodigo": "INT1",
+                "VlrCodigo": "8445291716841"
+              },
+              "NmbItem": "GALLETA TRITON MCKAY 116GR, VAINILLA",
+              "DscItem": "1.0 x 1 UN $840 Bruto/$706.0 Neto",
+              "QtyItem": "1.0",
+              "UnmdItem": "UN",
+              "PrcItem": "706.0",
+              "MontoItem": "706"
+            },
+            {
+              "NroLinDet": "3",
+              "CdgItem": {
+                "TpoCodigo": "INT1",
+                "VlrCodigo": "7790"
+              },
+              "NmbItem": "JAMON ACARAMELADO SAN JORGE KG",
+              "DscItem": "0.248 x 1 KGV $9798 Bruto/$8233.871 Neto",
+              "QtyItem": "0.248",
+              "UnmdItem": "KGV",
+              "PrcItem": "8233.871",
+              "MontoItem": "2042"
+            }
+          ]
+        }
+      },
+      {
+        "Documento": {
+          "Encabezado": {
+            "IdDoc": {
+              "TipoDTE": "61",
+              "Folio": "24665324",
+              "FchEmis": "2026-04-01",
+              "MntPagos": {
+                "FchPago": "2026-04-01",
+                "MntPago": "8821"
+              },
+              "TermPagoCdg": null
+            },
+            "Emisor": {
+              "RUTEmisor": "91144000-8",
+              "RznSoc": "Embotelladora Andina S.A.",
+              "GiroEmis": "FABRICA DE BEBIDAS ANALCOHOLICAS,COMERC DE ALCOHOLES,IMPORT Y EXPORTAC",
+              "Acteco": "829900",
+              "Sucursal": "Planta Renca",
+              "CdgSIISucur": "005095932",
+              "DirOrigen": "Miraflores 9153 Renca, Santiago",
+              "CmnaOrigen": "Santiago",
+              "CiudadOrigen": "Santiago",
+              "CdgVendedor": "CI36"
+            },
+            "Receptor": {
+              "RUTRecep": "77384122-5",
+              "CdgIntRecep": "0501183489",
+              "RznSocRecep": "FK SPA",
+              "GiroRecep": "COMIDA AL PASO",
+              "Contacto": null,
+              "DirRecep": "Alferez Real 1485",
+              "CmnaRecep": "Providencia",
+              "CiudadRecep": "Santiago"
+            },
+            "Totales": {
+              "MntNeto": "6869",
+              "MntExe": "0",
+              "TasaIVA": "19.00",
+              "IVA": "1305",
+              "ImptoReten": {
+                "TipoImp": "27",
+                "TasaImp": "10.00",
+                "MontoImp": "647"
+              },
+              "MntTotal": "8821"
+            }
+          },
+          "Detalle": [
+            {
+              "NroLinDet": "0001",
+              "CdgItem": {
+                "TpoCodigo": "0",
+                "VlrCodigo": "121325"
+              },
+              "NmbItem": "Sprite MidCal LT350cc x 6",
+              "DscItem": "000000000000008466|000000000000000647|000000000000008821|000000000000000735",
+              "QtyItem": "2.000",
+              "UnmdItem": "PAC",
+              "PrcItem": "4233",
+              "DescuentoPct": "23.59",
+              "DescuentoMonto": "1997",
+              "RecargoMonto": "400",
+              "CodImpAdic": "27",
+              "MontoItem": "6869"
+            }
+          ]
+        }
+      },
+      {
+        "Documento": {
+          "Encabezado": {
+            "IdDoc": {
+              "TipoDTE": "33",
+              "Folio": "94320344",
+              "FchEmis": "2026-04-01",
+              "MntPagos": {
+                "FchPago": "2026-04-01",
+                "MntPago": "84457"
+              },
+              "TermPagoCdg": null
+            },
+            "Emisor": {
+              "RUTEmisor": "91144000-8",
+              "RznSoc": "Embotelladora Andina S.A.",
+              "GiroEmis": "FABRICA DE BEBIDAS ANALCOHOLICAS,COMERC DE ALCOHOLES,IMPORT Y EXPORTAC",
+              "Acteco": "829900",
+              "Sucursal": "Planta Renca",
+              "CdgSIISucur": "005095932",
+              "DirOrigen": "Miraflores 9153 Renca, Santiago",
+              "CmnaOrigen": "Santiago",
+              "CiudadOrigen": "Santiago",
+              "CdgVendedor": "CI36"
+            },
+            "Receptor": {
+              "RUTRecep": "77384122-5",
+              "CdgIntRecep": "0501183489",
+              "RznSocRecep": "FK SPA",
+              "GiroRecep": "COMIDA AL PASO",
+              "Contacto": null,
+              "DirRecep": "Alferez Real 1485",
+              "CmnaRecep": "Providencia",
+              "CiudadRecep": "Santiago"
+            },
+            "Totales": {
+              "MntNeto": "65148",
+              "MntExe": "0",
+              "TasaIVA": "19.00",
+              "IVA": "12378",
+              "ImptoReten": {
+                "TipoImp": "27",
+                "TasaImp": "10.00",
+                "MontoImp": "3926"
+              },
+              "MntTotal": "84457"
+            }
+          },
+          "Detalle": [
+            {
+              "NroLinDet": "0001",
+              "CdgItem": {
+                "TpoCodigo": "0",
+                "VlrCodigo": "120451"
+              },
+              "NmbItem": "Coca Cola Sin Azucar Personal 350cc x 24",
+              "DscItem": "000000000000042246|000000000000002688|000000000000039184|000000000000000544",
+              "QtyItem": "3.000",
+              "UnmdItem": "CAJ",
+              "PrcItem": "14082",
+              "DescuentoPct": "36.38",
+              "DescuentoMonto": "15369",
+              "RecargoMonto": "3792",
+              "CodImpAdic": "27",
+              "MontoItem": "30669"
+            },
+            {
+              "NroLinDet": "0002",
+              "CdgItem": {
+                "TpoCodigo": "0",
+                "VlrCodigo": "120149"
+              },
+              "NmbItem": "Coca Cola Express VD237cc x 24",
+              "DscItem": "000000000000018654|000000000000003005|000000000000027338|000000000000000380",
+              "QtyItem": "3.000",
+              "UnmdItem": "CAJ",
+              "PrcItem": "6218",
+              "DescuentoPct": "10.50",
+              "DescuentoMonto": "1959",
+              "RecargoMonto": "3753",
+              "CodImpAdic": "271",
+              "MontoItem": "20448"
+            },
+            {
+              "NroLinDet": "0003",
+              "CdgItem": {
+                "TpoCodigo": "0",
+                "VlrCodigo": "121367"
+              },
+              "NmbItem": "Sprite MC Express 237cc x 24",
+              "DscItem": "000000000000006604|000000000000000591|000000000000009114|000000000000000380",
+              "QtyItem": "1.000",
+              "UnmdItem": "CAJ",
+              "PrcItem": "6604",
+              "DescuentoPct": "10.50",
+              "DescuentoMonto": "693",
+              "RecargoMonto": "1251",
+              "CodImpAdic": "27",
+              "MontoItem": "7162"
+            },
+            {
+              "NroLinDet": "0004",
+              "CdgItem": {
+                "TpoCodigo": "0",
+                "VlrCodigo": "121325"
+              },
+              "NmbItem": "Sprite MidCal LT350cc x 6",
+              "DscItem": "000000000000008466|000000000000000647|000000000000008821|000000000000000735",
+              "QtyItem": "2.000",
+              "UnmdItem": "PAC",
+              "PrcItem": "4233",
+              "DescuentoPct": "23.59",
+              "DescuentoMonto": "1997",
+              "RecargoMonto": "400",
+              "CodImpAdic": "27",
+              "MontoItem": "6869"
+            }
+          ]
+        }
+      },
+      {
+        "Documento": {
+          "Encabezado": {
+            "IdDoc": {
+              "TipoDTE": "33",
+              "Folio": "18505",
+              "FchEmis": "2026-04-01",
+              "FmaPago": "2",
+              "MntPagos": {
+                "FchPago": "2026-04-06",
+                "MntPago": "24990"
+              }
+            },
+            "Emisor": {
+              "RUTEmisor": "76946349-6",
+              "RznSoc": "JOSE CELSI MAZIERES SPA",
+              "GiroEmis": "COMPRA VENTA DE FRUTAS Y VERDURAS AL POR MENOR",
+              "CorreoEmisor": "FINANZAS@CARTMARKET.CL",
+              "Acteco": "472103",
+              "DirOrigen": "CAMINO LAS PARCELAS 7",
+              "CmnaOrigen": "ISLA DE MAIPO",
+              "CiudadOrigen": "SANTIAGO"
+            },
+            "Receptor": {
+              "RUTRecep": "77384122-5",
+              "RznSocRecep": "FK SPA",
+              "GiroRecep": "SUMINISTRO DE COMIDAS POR ENCARGO",
+              "Contacto": "SIN CONTACTO",
+              "DirRecep": "Alf?rez Real 1485, Providencia",
+              "CmnaRecep": "PROVIDENCIA",
+              "CiudadRecep": "SANTIAGO"
+            },
+            "Totales": {
+              "MntNeto": "21000",
+              "MntExe": "0",
+              "TasaIVA": "19",
+              "IVA": "3990",
+              "MntTotal": "24990"
+            }
+          },
+          "Detalle": [
+            {
+              "NroLinDet": "1",
+              "CdgItem": {
+                "TpoCodigo": "INT",
+                "VlrCodigo": "C025"
+              },
+              "NmbItem": "Champi??n Paris 2?",
+              "DscItem": null,
+              "QtyItem": "1",
+              "UnmdItem": "KG",
+              "PrcItem": "5900.000000",
+              "MontoItem": "5900"
+            },
+            {
+              "NroLinDet": "2",
+              "CdgItem": {
+                "TpoCodigo": "INT",
+                "VlrCodigo": "L021"
+              },
+              "NmbItem": "Lim?n",
+              "DscItem": null,
+              "QtyItem": "10",
+              "UnmdItem": "KG",
+              "PrcItem": "1150.000000",
+              "MontoItem": "11500"
+            },
+            {
+              "NroLinDet": "3",
+              "CdgItem": {
+                "TpoCodigo": "INT",
+                "VlrCodigo": "T002"
+              },
+              "NmbItem": "Tomate Cherry",
+              "DscItem": null,
+              "QtyItem": "2",
+              "UnmdItem": "KG",
+              "PrcItem": "1800.000000",
+              "MontoItem": "3600"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

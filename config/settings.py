@@ -1,5 +1,5 @@
 """
-Configuration settings for the scraper
+Configuration settings for the XML processor
 """
 
 import os
@@ -13,41 +13,29 @@ load_dotenv()
 class Settings:
     """Application settings"""
 
-    # SII Credentials
-    SII_RUT = os.getenv("SII_RUT", "")
-    SII_PASSWORD = os.getenv("SII_PASSWORD", "")
-
     # Paths
-    DOWNLOAD_PATH = os.getenv("DOWNLOAD_PATH", "./data")
+    DATA_PATH = os.getenv("DATA_PATH", "./data")
+    OUTPUT_PATH = os.getenv("OUTPUT_PATH", "./output")
     LOG_PATH = os.getenv("LOG_PATH", "./logs")
-
-    # Browser Settings
-    BROWSER_TYPE = os.getenv("BROWSER_TYPE", "chrome")
-    HEADLESS = os.getenv("HEADLESS", "True").lower() == "true"
-
-    # Request Settings
-    REQUEST_TIMEOUT = int(os.getenv("REQUEST_TIMEOUT", "30"))
-    RETRY_ATTEMPTS = int(os.getenv("RETRY_ATTEMPTS", "3"))
-
+    
+    # File extensions
+    ALLOWED_EXTENSIONS = [".xml"]
+    
     # Logging
     LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
-
-    # SII URLs (adjust as needed)
-    SII_BASE_URL = "https://www.sii.cl"
-    SII_LOGIN_URL = f"{SII_BASE_URL}/portales/login-ciudadano"
 
     @classmethod
     def validate(cls) -> bool:
         """
-        Validate required settings
+        Validate required settings and create directories if needed
         
         Returns:
             bool: True if all required settings are valid
         """
-        if not cls.SII_RUT or not cls.SII_PASSWORD:
-            raise ValueError(
-                "SII_RUT and SII_PASSWORD must be set in .env file"
-            )
+        Path(cls.DATA_PATH).mkdir(parents=True, exist_ok=True)
+        Path(cls.OUTPUT_PATH).mkdir(parents=True, exist_ok=True)
+        Path(cls.LOG_PATH).mkdir(parents=True, exist_ok=True)
+        return True
         return True
 
     @classmethod

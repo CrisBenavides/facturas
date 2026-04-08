@@ -1,11 +1,12 @@
 """
-Main entry point for the Facturas SII Scraper
+Main entry point for the Facturas XML Processor
 """
 
 import logging
-from config.settings import settings
+import json
+from config.settings import Settings
 from src.utils import setup_logging
-from src.scraper import SIIScraper
+from src.scraper import XMLProcessor
 
 logger = logging.getLogger(__name__)
 
@@ -14,26 +15,32 @@ def main():
     """Main execution function"""
     try:
         # Setup logging
-        setup_logging(settings.LOG_PATH, settings.LOG_LEVEL)
-        logger.info("Starting Facturas SII Scraper")
+        setup_logging(Settings.LOG_PATH, Settings.LOG_LEVEL)
+        logger.info("Starting Facturas XML Processor")
         
-        # Validate settings
-        settings.validate()
+        # Validate settings and create directories
+        Settings.validate()
+        logger.info(f"Data path: {Settings.DATA_PATH}")
+        logger.info(f"Output path: {Settings.OUTPUT_PATH}")
         
-        # Initialize scraper
-        scraper = SIIScraper(settings.to_dict())
+        # Initialize XML processor
+        processor = XMLProcessor(Settings.DATA_PATH)
         
-        # Authenticate
-        if not scraper.authenticate():
-            logger.error("Failed to authenticate with SII")
+        # Process all XML files
+        result, input_filename = processor.process_all_files()
+        
+        if not result["SetDTE"]["DTE"]:
+            logger.warning("No XML files were processed")
             return 1
         
-        # TODO: Add main logic here
-        logger.info("Scraper initialized successfully")
+        # Save results to JSON with same nomenclature as input
+        output_filename = f"{input_filename}.json" if input_filename else "processed_documents.json"
+        output_file = f"{Settings.OUTPUT_PATH}/{output_filename}"
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(result, f, indent=2, ensure_ascii=False)
         
-        # Cleanup
-        scraper.close()
-        logger.info("Scraper completed successfully")
+        logger.info(f"Results saved to: {output_file}")
+        logger.info(f"Successfully processed {len(result['SetDTE']['DTE'])} documents")
         
         return 0
         
