@@ -5,6 +5,9 @@ import logging
 import hashlib
 from datetime import datetime
 import xml.etree.ElementTree as ET
+import concurrent.futures
+from functools import partial
+import re
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -121,37 +124,6 @@ def extract_item_rows(documento, filename):
         return []
 
 
-def is_duplicate(row: dict, bq_client) -> bool:
-    """Check if document already exists in BigQuery"""
-    try:
-        query = f"""
-        SELECT COUNT(*) as count 
-        FROM `{PROJECT_ID}.{DATASET_ID}.{TABLE_ID}`
-        WHERE hash_documento = @hash
-        AND is_duplicate = FALSE
-        """
-        
-        from google.cloud import bigquery
-        job_config = bigquery.QueryJobConfig(
-            query_parameters=[
-                bigquery.ScalarQueryParameter("hash", "STRING", row["hash_documento"]),
-            ]
-        )
-        
-        query_job = bq_client.query(query, job_config=job_config)
-        results = query_job.result()
-        
-        for result in results:
-            if result["count"] > 0:
-                logger.info(f"Duplicate found: {row['folio']}")
-                return True
-        
-        return False
-    except Exception as e:
-        logger.error(f"Error checking duplicates: {str(e)}")
-        return False
-
-
 def insert_rows_to_bigquery(rows: list, bq_client) -> None:
     """Insert rows into BigQuery table"""
     try:
@@ -170,22 +142,34 @@ def insert_rows_to_bigquery(rows: list, bq_client) -> None:
         logger.error(f"Error inserting rows: {str(e)}")
 
 
+def download_and_parse_xml(blob_name, storage_client, bucket_name):
+    """Download and parse a single XML file - for concurrent processing"""
+    try:
+        bucket = storage_client.bucket(bucket_name)
+        blob = bucket.blob(blob_name)
+        xml_content = blob.download_as_string()
+        logger.info(f"Downloaded {blob_name} ({len(xml_content)} bytes)")
+        root = ET.fromstring(xml_content)
+        return blob_name, root
+    except Exception as e:
+        logger.error(f"Error downloading/parsing {blob_name}: {str(e)}", exc_info=True)
+        return blob_name, None
+
+
 @functions_framework.http
 def process_xml_to_bq(request):
-    """HTTP endpoint - manually trigger after uploading XML to bucket"""
+    """HTTP endpoint - batch process multiple XML files efficiently"""
     try:
-        logger.info("=== FUNCTION CALLED ===")
+        logger.info("=== BATCH PROCESSING STARTED ===")
         
-        # Parse request to get filename (or use latest in bucket)
+        # Parse request
         try:
             data = request.get_json()
-            file_name = data.get("name") if data else None
+            file_pattern = data.get("name", "DTE_Recibidos") if data else "DTE_Recibidos"
         except:
-            file_name = None
+            file_pattern = "DTE_Recibidos"
         
         bucket_name = "facturas-xml-uploads"
-        
-        logger.info(f"Processing: {file_name} from {bucket_name}")
         
         # Lazy load clients
         from google.cloud import storage, bigquery
@@ -194,77 +178,129 @@ def process_xml_to_bq(request):
         bq_client = bigquery.Client()
         logger.info("Clients initialized")
         
-        # If no filename provided, get the most recently uploaded file
-        if not file_name:
-            logger.info("No filename in request, getting latest XML file from bucket...")
-            bucket = storage_client.bucket(bucket_name)
-            blobs = list(bucket.list_blobs(prefix="DTE_Recibidos"))
-            if blobs:
-                # Get most recent by updated time
-                latest_blob = max(blobs, key=lambda x: x.updated)
-                file_name = latest_blob.name
-                logger.info(f"Found latest file: {file_name}")
-            else:
-                logger.error("No XML files found in bucket")
-                return ("No files found", 400)
+        # ✓ OPTIMIZATION 1: Load ALL existing document hashes ONCE into memory
+        logger.info("Loading existing document hashes from BigQuery (ONE query)...")
+        query = f"""
+        SELECT DISTINCT hash_documento 
+        FROM `{PROJECT_ID}.{DATASET_ID}.{TABLE_ID}`
+        WHERE hash_documento IS NOT NULL
+        """
         
-        # Download XML
+        existing_hashes = set()
+        try:
+            query_job = bq_client.query(query)
+            for row in query_job.result():
+                existing_hashes.add(row["hash_documento"])
+            logger.info(f"Loaded {len(existing_hashes)} existing document hashes into memory")
+        except Exception as e:
+            logger.warning(f"Error loading existing hashes: {str(e)}. Continuing with empty cache.")
+            existing_hashes = set()
+        
+        # Get files to process
+        logger.info(f"Listing files matching pattern: {file_pattern}")
         bucket = storage_client.bucket(bucket_name)
-        blob = bucket.blob(file_name)
-        xml_content = blob.download_as_string()
         
-        logger.info(f"Downloaded {len(xml_content)} bytes from {bucket_name}/{file_name}")
-        
-        # Parse XML
-        root = ET.fromstring(xml_content)
-        logger.info(f"Parsed XML root: {root.tag}")
-        
-        # Extract all documents
-        rows_to_insert = []
-        dtes = root.findall("DTE")
-        logger.info(f"Found {len(dtes)} DTE elements")
-        
-        for dte_idx, dte in enumerate(dtes):
-            logger.info(f"Processing DTE #{dte_idx+1}")
-            documento = dte.find("Documento")
-            if documento is not None:
-                logger.info(f"Found Documento element")
-                # Extract item-level rows
-                item_rows = extract_item_rows(documento, file_name)
-                logger.info(f"extract_item_rows returned {len(item_rows)} rows")
-                
-                if not item_rows:
-                    logger.info("No item rows, skipping")
-                    continue
-                
-                # Check for duplicates at document level
-                dedup_row = item_rows[0]
-                if not is_duplicate({"hash_documento": dedup_row["hash_md5"]}, bq_client):
-                    logger.info(f"Not a duplicate, adding {len(item_rows)} rows (status: processed)")
-                    for row in item_rows:
-                        row["estado_procesamiento"] = "processed"
-                        row["es_duplicado"] = False
-                        rows_to_insert.append(row)
-                else:
-                    logger.info(f"Is a duplicate, adding {len(item_rows)} rows (status: duplicate)")
-                    for row in item_rows:
-                        row["estado_procesamiento"] = "duplicate"
-                        row["es_duplicado"] = True
-                        rows_to_insert.append(row)
-            else:
-                logger.warning("No Documento element found in DTE")
-        
-        logger.info(f"Total rows to insert: {len(rows_to_insert)}")
-        
-        # Insert into BigQuery
-        if rows_to_insert:
-            logger.info(f"Calling insert_rows_to_bigquery with {len(rows_to_insert)} rows")
-            insert_rows_to_bigquery(rows_to_insert, bq_client)
-            logger.info("=== FUNCTION COMPLETED SUCCESSFULLY ===")
-            return (f"Processed {len(rows_to_insert)} rows", 200)
+        # Handle wildcard patterns
+        if "*" in file_pattern:
+            pattern_regex = file_pattern.replace("*", ".*")
         else:
-            logger.warning("No rows to insert")
-            return ("No rows to insert", 200)
+            pattern_regex = f".*{file_pattern}.*"
+        
+        # List all matching XML files
+        all_blobs = list(bucket.list_blobs())
+        matching_blobs = [
+            blob for blob in all_blobs 
+            if re.match(pattern_regex, blob.name) and blob.name.endswith('.xml')
+        ]
+        
+        logger.info(f"Found {len(matching_blobs)} XML files matching pattern: {file_pattern}")
+        
+        if not matching_blobs:
+            logger.warning(f"No XML files found matching pattern: {file_pattern}")
+            return ("No files found", 400)
+        
+        # ✓ OPTIMIZATION 2: Download and parse files concurrently (max 5 workers)
+        logger.info(f"Downloading {len(matching_blobs)} files concurrently (5 workers)...")
+        file_data = []
+        
+        try:
+            with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+                results = executor.map(
+                    partial(download_and_parse_xml, storage_client=storage_client, bucket_name=bucket_name),
+                    [blob.name for blob in matching_blobs]
+                )
+                file_data = [(name, root) for name, root in results if root is not None]
+        except Exception as e:
+            logger.error(f"Error during concurrent download: {str(e)}", exc_info=True)
+            file_data = []
+        
+        logger.info(f"Successfully downloaded and parsed {len(file_data)} files")
+        
+        # ✓ OPTIMIZATION 3: Process all files, checking hashes against cached set (instant lookup)
+        total_rows_inserted = 0
+        processed_files = 0
+        duplicate_files = 0
+        processed_documents = 0
+        duplicate_documents = 0
+        
+        for file_name, root in file_data:
+            try:
+                rows_to_insert = []
+                dtes = root.findall("DTE")
+                logger.info(f"Processing {file_name}: {len(dtes)} DTE elements")
+                
+                for dte in dtes:
+                    documento = dte.find("Documento")
+                    if documento is not None:
+                        item_rows = extract_item_rows(documento, file_name)
+                        
+                        if not item_rows:
+                            continue
+                        
+                        # ✓ CHECK AGAINST CACHED HASHES (instant in-memory lookup)
+                        dedup_row = item_rows[0]
+                        doc_hash = dedup_row["hash_md5"]
+                        is_dup = doc_hash in existing_hashes
+                        
+                        if is_dup:
+                            logger.info(f"  → Duplicate document detected: folio={dedup_row['folio']}")
+                            duplicate_documents += 1
+                            for row in item_rows:
+                                row["estado_procesamiento"] = "duplicate"
+                                row["es_duplicado"] = True
+                                rows_to_insert.append(row)
+                        else:
+                            logger.info(f"  → New document: folio={dedup_row['folio']}")
+                            processed_documents += 1
+                            # Add to cache for subsequent checks in this batch
+                            existing_hashes.add(doc_hash)
+                            for row in item_rows:
+                                row["estado_procesamiento"] = "processed"
+                                row["es_duplicado"] = False
+                                rows_to_insert.append(row)
+                
+                # Batch insert all rows from this file
+                if rows_to_insert:
+                    insert_rows_to_bigquery(rows_to_insert, bq_client)
+                    total_rows_inserted += len(rows_to_insert)
+                    processed_files += 1
+                    logger.info(f"✓ {file_name}: {len(rows_to_insert)} rows inserted")
+                else:
+                    logger.info(f"⚠ {file_name}: no rows to insert")
+            
+            except Exception as e:
+                logger.error(f"Error processing {file_name}: {str(e)}", exc_info=True)
+                continue
+        
+        logger.info("=== BATCH PROCESSING COMPLETED ===")
+        summary = (
+            f"Processed {processed_files} files | "
+            f"{processed_documents} new documents | "
+            f"{duplicate_documents} duplicate documents | "
+            f"{total_rows_inserted} rows inserted"
+        )
+        logger.info(summary)
+        return (summary, 200)
         
     except Exception as e:
         logger.error(f"Error: {str(e)}", exc_info=True)
